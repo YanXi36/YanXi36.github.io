@@ -176,6 +176,12 @@
     position: relative; /* Positioning for absolute children */
 }
 
+.hero-background {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*** Hero Header ***/
 .hero-header {
