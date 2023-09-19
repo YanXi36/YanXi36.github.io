@@ -191,8 +191,8 @@
     background-size: cover;
 
     /* 添加动画效果 */
-    animation: zoomIn 10s ease-in-out infinite alternate;
-    transform-origin: center center;
+    /* animation: zoomIn 10s ease-in-out infinite alternate;
+    transform-origin: center center; */
 }
 
 @keyframes zoomIn {
