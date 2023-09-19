@@ -6,11 +6,28 @@
     --dark: #14141F;
 }
 
+/* Star add */
 .link {
     color:gray;
     text-decoration: none; 
     background-color: none;
 }
+
+.wrap {
+    width: 100%;
+    padding: 3.5em 0;
+}
+
+.grey {
+    background: white;
+    padding: 100px 0 150px;
+}
+
+.recent-wrap {
+    text-align: center;
+}
+
+/* End add */
 
 .fw-medium {
     font-weight: 600 !important;
