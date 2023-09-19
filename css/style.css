@@ -6,6 +6,12 @@
     --dark: #14141F;
 }
 
+.link {
+    color:gray;
+    text-decoration: none; 
+    background-color: none;
+}
+
 .fw-medium {
     font-weight: 600 !important;
 }
