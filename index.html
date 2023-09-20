@@ -45,7 +45,7 @@
             var searchResults = document.getElementById("searchResults");
             searchResults.innerHTML = "";
 
-            // 定义要搜索的URL列表
+            // URL列表
             var urls = [ 
                 "https://yanxi36.github.io", 
                 "https://yanxi36.github.io/salesbase.html", 
@@ -59,22 +59,25 @@
                 "https://yanxi36.github.io/brand/APLAX/Galaxy.html", 
                 "https://yanxi36.github.io/brand/APLAX/Hua_yang.html", 
                 "https://yanxi36.github.io/brand/APLAX/Marrow.html" 
-            ]; // 添加您想要搜索的URL
+            ];
 
-            // 遍历每个URL进行搜索
             for (var i = 0; i < urls.length; i++) {
                 var url = urls[i];
                 try {
                     const response = await fetch(url);
                     if (response.ok) {
                         const data = await response.text();
+
+                        var parser = new DOMParser();
+                        var doc = parser.parseFromString(data, "text/html");
+                        var pageTitle = doc.querySelector("title").textContent;
+
                         if (data.toLowerCase().includes(searchInput)) {
-                            // 如果页面包含搜索词，创建一个链接以跳转到该页面
                             var resultLink = document.createElement("a");
                             resultLink.href = url;
-                            resultLink.textContent = url;
+                            resultLink.textContent = pageTitle;
                             searchResults.appendChild(resultLink);
-                            searchResults.appendChild(document.createElement("br")); // 添加一个换行
+                            searchResults.appendChild(document.createElement("br"));
                         }
                     } else {
                         console.error("无法加载页面：" + url);
