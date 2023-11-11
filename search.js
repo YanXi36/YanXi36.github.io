@@ -1,51 +1,58 @@
-//    Developer: Yantong Wu
-//    File Purpose: The search function (common used)
-//    Update Date : 2023/11/11
+// Developer: Yantong Wu
+// File Purpose: The search function (commonly used)
+// Update Date: 2023/11/12
+
+async function createResultLink(href, textContent) {
+    const resultLink = document.createElement("a");
+    resultLink.href = href;
+    resultLink.textContent = textContent;
+    searchResults.appendChild(resultLink);
+    searchResults.appendChild(document.createElement("br"));
+}
 
 async function search() {
-    var searchInput = document.getElementById("searchInput").value.toLowerCase();
-    var searchResults = document.getElementById("searchResults");
+    const searchInput = document.getElementById("searchInput").value.toLowerCase().replace(/\s/g, ''); // Remove spaces
+    const searchResults = document.getElementById("searchResults");
     searchResults.innerHTML = "";
 
-    // URL search list
-    var urls = [
+    const processSeriesConfig = async (seriesConfig) => {
+        const seriesTitle = seriesConfig.title.toLowerCase().replace(/\s/g, '');
+
+        if (seriesTitle.includes(searchInput)) {
+            await createResultLink(seriesConfig.page, seriesConfig.title);
+        }
+
+        await Promise.all(seriesConfig.imageInfo.map(async (image) => {
+            if (image.displayText.toLowerCase().replace(/\s/g, '').includes(searchInput)) {
+                await createResultLink(seriesConfig.page, seriesConfig.title);
+            }
+        }));
+    };
+
+    for (const seriesConfig of Object.values(productConfigs)) {
+        await processSeriesConfig(seriesConfig);
+    }
+
+    const urls = [
         "https://yanxi36.github.io",
         "https://yanxi36.github.io/salesbase.html",
         "https://yanxi36.github.io/download.html",
-        "https://yanxi36.github.io/brand/APLAX/APLAX.html",
-        "https://yanxi36.github.io/brand/APLAX/Chao_jing.html",
-        "https://yanxi36.github.io/brand/APLAX/Fong_cai.html",
-        "https://yanxi36.github.io/brand/APLAX/Star.html",
-        "https://yanxi36.github.io/brand/APLAX/Duo_la.html",
-        "https://yanxi36.github.io/brand/APLAX/Kaleidoscope.html",
-        "https://yanxi36.github.io/brand/APLAX/Galaxy.html",
-        "https://yanxi36.github.io/brand/APLAX/Hua_yang.html",
-        "https://yanxi36.github.io/brand/APLAX/Marrow.html"
     ];
 
-    for (var i = 0; i < urls.length; i++) {
-        var url = urls[i];
+    await Promise.all(urls.map(async (url) => {
         try {
             const response = await fetch(url);
             if (response.ok) {
                 const data = await response.text();
-
-                var parser = new DOMParser();
-                var doc = parser.parseFromString(data, "text/html");
-                var pageTitle = doc.querySelector("title").textContent;
-
-                if (data.toLowerCase().includes(searchInput)) {
-                    var resultLink = document.createElement("a");
-                    resultLink.href = url;
-                    resultLink.textContent = pageTitle;
-                    searchResults.appendChild(resultLink);
-                    searchResults.appendChild(document.createElement("br"));
+                if (data.toLowerCase().replace(/\s/g, '').includes(searchInput)) {
+                    const pageTitle = new DOMParser().parseFromString(data, "text/html").querySelector("title").textContent;
+                    await createResultLink(url, pageTitle);
                 }
             } else {
-                console.error("Failed to load the page：" + url);
+                console.error("Failed to load the page: " + url);
             }
         } catch (error) {
-            console.error("Failed to load the page：" + url);
+            console.error("Failed to load the page: " + url);
         }
-    }
+    }));
 }
