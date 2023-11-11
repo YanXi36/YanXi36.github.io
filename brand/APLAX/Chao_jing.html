@@ -1,3 +1,9 @@
+<!-- 
+    Developer: Yantong Wu
+    File Purpose: APLAX - Chao jing series
+    Update Date : 2023/11/11
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,18 +38,14 @@
     </script>
     <!-- Navbar & Hero End -->
 
-    <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-        <!-- <h6 class="section-title bg-white text-center text-primary px-3">北部</h6> -->
-        <!-- <button onclick="window.location.href='#region1'">北部</button> -->
-        <a class="btn btn-primary rounded-pill" href="Chao_jing.html">潮境系列</a>
-        <a class="btn btn-primary rounded-pill" href="Fong_cai.html">楓采系列</a>
-        <a class="btn btn-primary rounded-pill" href="Star.html">星空系列</a>
-        <a class="btn btn-primary rounded-pill" href="Duo_la.html">朵拉系列</a>
-        <a class="btn btn-primary rounded-pill" href="Kaleidoscope.html">萬花筒系列</a>
-        <a class="btn btn-primary rounded-pill" href="Galaxy.html">銀河系列</a>
-        <a class="btn btn-primary rounded-pill" href="Hua_yang.html">花漾系列</a>
-        <a class="btn btn-primary rounded-pill" href="Marrow.html">精華版</a>
-    </div>
+    <!-- Series Start -->
+    <div id="series-container"></div>
+    <script>
+        $(function(){
+            $("#series-container").load("series.html");
+        });
+    </script>
+    <!-- Series End -->
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">

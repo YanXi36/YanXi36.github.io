@@ -1,3 +1,7 @@
+//    Developer: Yantong Wu
+//    File Purpose: The config of APLAX series
+//    Update Date : 2023/11/11
+
 var productConfigs = {
     Marrow: {
         imageInfo: [
