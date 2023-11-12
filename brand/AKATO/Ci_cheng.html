@@ -86,27 +86,19 @@
     <!-- Animation when mouse hovers over image -->
     <style>
         .block-container {
-            width: 200px; /* Adjust the width as needed */
-            height: 200px; /* Adjust the height as needed */
+            width: 200px;
+            height: 200px;
         }
-
+    
         .img-container {
             overflow: hidden;
             position: relative;
         }
-
-        .img-inner-container :hover {
-            transform: scale(2.5);
-            max-width: 100%;
-            max-height: 100%;
-        }
     
         .img-inner-container img {
-            /* transition: transform 0.3s ease-in-out; */
-            transform-origin: center; /* Set the transform origin to the center */
             width: 80%;
             height: 80%;
-            object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+            object-fit: cover;
         }
     </style>
     
@@ -123,6 +115,9 @@
             var imgElement = document.createElement("img");
             imgElement.classList.add("img-fluid", "bg-light");
             imgElement.src = productConfigs.Ci_cheng.imagePath + info.fileName;
+
+            // Set the alternate image source on hover
+            imgElement.setAttribute("data-alt-src", productConfigs.Ci_cheng.imagePath + info.hover_file);
     
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;
@@ -135,6 +130,16 @@
             divElement.appendChild(smallElement);
     
             imageContainer.appendChild(divElement);
+
+            // Add event listener for hover effect
+            imgElement.addEventListener("mouseenter", function () {
+                imgElement.src = imgElement.getAttribute("data-alt-src");
+            });
+
+            // Add event listener for mouse leave to revert to original image
+            imgElement.addEventListener("mouseleave", function () {
+                imgElement.src = productConfigs.Ci_cheng.imagePath + info.fileName;
+            });
         });
     </script>
     <!-- Service End -->
