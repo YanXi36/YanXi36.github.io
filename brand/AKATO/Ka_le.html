@@ -1,7 +1,7 @@
 <!-- 
     Developer: Yantong Wu
     File Purpose: AKATO 卡樂系列
-    Update Date : 2023/11/12
+    Update Date : 2023/11/23
 -->
 
 <!DOCTYPE html>
@@ -56,16 +56,16 @@
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/Ka_le/scene3.jpg">
+                    <img class=" " src="img/Ka_le/scene30.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/Ka_le/scene9.jpg">
+                    <img class=" " src="img/Ka_le/scene33.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/Ka_le/scene10.jpg">
+                    <img class=" " src="img/Ka_le/scene34.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/Ka_le/scene12.jpg">
+                    <img class=" " src="img/Ka_le/scene33.jpg">
                 </div>
             </div>
         </div>
@@ -89,15 +89,18 @@
             width: 200px;
             height: 200px;
         }
-    
+        
         .img-container {
+            width: 160px;
             overflow: hidden;
             position: relative;
         }
+
+        .img-container:hover img {
+            transform-origin: top left;
+        }
     
         .img-inner-container img {
-            width: 80%;
-            height: 80%;
             object-fit: cover;
         }
     </style>
@@ -105,7 +108,7 @@
     <script>
         // Get the container
         var imageContainer = document.getElementById("imageContainer");
-    
+        
         // Dynamic generation of image elements and adding them to the container
         productConfigs.Ka_le.imageInfo.forEach(function (info) {
             var divElement = document.createElement("div");
@@ -116,30 +119,27 @@
             imgElement.classList.add("img-fluid", "bg-light");
             imgElement.src = productConfigs.Ka_le.imagePath + info.fileName;
 
-            // Set the alternate image source on hover
-            imgElement.setAttribute("data-alt-src", productConfigs.Ka_le.imagePath + info.hover_file);
-    
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;
     
             var innerDiv = document.createElement("div");
             innerDiv.classList.add("col-1-1", "img-inner-container", "img-container");
             innerDiv.appendChild(imgElement);
+
+            // Set the dynamic scale factor from info.scale on hover
+            innerDiv.onmouseover = function () {
+                imgElement.style.transform = "scale(" + info.scale + ")";
+            };
+
+            // Reset the scale factor on mouseout
+            innerDiv.onmouseout = function () {
+                imgElement.style.transform = "scale(1)";
+            };
     
             divElement.appendChild(innerDiv);
             divElement.appendChild(smallElement);
     
             imageContainer.appendChild(divElement);
-
-            // Add event listener for hover effect
-            imgElement.addEventListener("mouseenter", function () {
-                imgElement.src = imgElement.getAttribute("data-alt-src");
-            });
-
-            // Add event listener for mouse leave to revert to original image
-            imgElement.addEventListener("mouseleave", function () {
-                imgElement.src = productConfigs.Ka_le.imagePath + info.fileName;
-            });
         });
     </script>
     <!-- Service End -->
