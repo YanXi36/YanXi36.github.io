@@ -1,7 +1,7 @@
 <!-- 
     Developer: Yantong Wu
     File Purpose: AKATO 群馬系列
-    Update Date : 2023/11/12
+    Update Date : 2023/12/23
 -->
 
 <!DOCTYPE html>
@@ -86,18 +86,21 @@
     <!-- Animation when mouse hovers over image -->
     <style>
         .block-container {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
         }
-    
+        
         .img-container {
+            width: 210px;
             overflow: hidden;
             position: relative;
         }
+
+        .img-container:hover img {
+            transform-origin: top left;
+        }
     
         .img-inner-container img {
-            width: 80%;
-            height: 80%;
             object-fit: cover;
         }
     </style>
@@ -105,7 +108,7 @@
     <script>
         // Get the container
         var imageContainer = document.getElementById("imageContainer");
-    
+        
         // Dynamic generation of image elements and adding them to the container
         productConfigs.Qun_ma.imageInfo.forEach(function (info) {
             var divElement = document.createElement("div");
@@ -116,30 +119,27 @@
             imgElement.classList.add("img-fluid", "bg-light");
             imgElement.src = productConfigs.Qun_ma.imagePath + info.fileName;
 
-            // Set the alternate image source on hover
-            imgElement.setAttribute("data-alt-src", productConfigs.Qun_ma.imagePath + info.hover_file);
-    
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;
     
             var innerDiv = document.createElement("div");
             innerDiv.classList.add("col-1-1", "img-inner-container", "img-container");
             innerDiv.appendChild(imgElement);
+
+            // Set the dynamic scale factor from info.scale on hover
+            innerDiv.onmouseover = function () {
+                imgElement.style.transform = "scale(" + info.scale + ")";
+            };
+
+            // Reset the scale factor on mouseout
+            innerDiv.onmouseout = function () {
+                imgElement.style.transform = "scale(1)";
+            };
     
             divElement.appendChild(innerDiv);
             divElement.appendChild(smallElement);
     
             imageContainer.appendChild(divElement);
-
-            // Add event listener for hover effect
-            imgElement.addEventListener("mouseenter", function () {
-                imgElement.src = imgElement.getAttribute("data-alt-src");
-            });
-
-            // Add event listener for mouse leave to revert to original image
-            imgElement.addEventListener("mouseleave", function () {
-                imgElement.src = productConfigs.Qun_ma.imagePath + info.fileName;
-            });
         });
     </script>
     <!-- Service End -->
