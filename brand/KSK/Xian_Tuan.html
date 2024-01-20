@@ -1,0 +1,173 @@
+<!-- 
+    Developer: Yantong Wu
+    File Purpose: KSK 香川系列
+    Update Date : 2024/01/20
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>KSK 香川系列 - 高世紀瓷質馬賽克專家</title>
+
+    <!--  jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("head").load("../header.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div id="topbar-container"></div>
+    <script>
+        $(function(){
+            $("#topbar-container").load("topbar.html");
+        });
+    </script>
+    <!-- Navbar & Hero End -->
+
+    <!-- Series Start -->
+    <div id="series-container"></div>
+    <script>
+        $(function(){
+            $("#series-container").load("series.html");
+        });
+    </script>
+    <!-- Series End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">KSK</h6>
+                <h1 class="mb-5">香川系列 - 應用場景展示</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item bg-white text-center border">
+                    <img class=" " src="img/Ka_le/scene30.jpg">
+                </div>
+                <div class="testimonial-item bg-white text-center border">
+                    <img class=" " src="img/Ka_le/scene33.jpg">
+                </div>
+                <div class="testimonial-item bg-white text-center border">
+                    <img class=" " src="img/Ka_le/scene34.jpg">
+                </div>
+                <div class="testimonial-item bg-white text-center border">
+                    <img class=" " src="img/Ka_le/scene33.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5">香川系列</h1>
+            </div>
+            <div class="row g-4 justify-content-center" id="imageContainer"></div>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <!-- Animation when mouse hovers over image -->
+    <style>
+        .block-container {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .img-container {
+            width: 210px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-container:hover img {
+            transform-origin: top left;
+        }
+    
+        .img-inner-container img {
+            object-fit: cover;
+        }
+    </style>
+    
+    <script>
+        // Get the container
+        var imageContainer = document.getElementById("imageContainer");
+        
+        // Dynamic generation of image elements and adding them to the container
+        productConfigs.Xian_Tuan.imageInfo.forEach(function (info) {
+            var divElement = document.createElement("div");
+            divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
+            divElement.setAttribute("data-wow-delay", "0.3s");
+    
+            var imgElement = document.createElement("img");
+            imgElement.classList.add("img-fluid", "bg-light");
+            imgElement.src = productConfigs.Xian_Tuan.imagePath + info.fileName;
+
+            var smallElement = document.createElement("small");
+            smallElement.textContent = info.displayText;
+    
+            var innerDiv = document.createElement("div");
+            innerDiv.classList.add("col-1-1", "img-inner-container", "img-container");
+            innerDiv.appendChild(imgElement);
+
+            // Set the dynamic scale factor from info.scale on hover
+            innerDiv.onmouseover = function () {
+                imgElement.style.transform = "scale(" + info.scale + ")";
+            };
+
+            // Reset the scale factor on mouseout
+            innerDiv.onmouseout = function () {
+                imgElement.style.transform = "scale(1)";
+            };
+    
+            divElement.appendChild(innerDiv);
+            divElement.appendChild(smallElement);
+    
+            imageContainer.appendChild(divElement);
+        });
+    </script>
+    <!-- Service End -->
+
+    <!-- Footer Start -->
+    <div id="footer-container"></div>
+    <script>
+        $(function(){
+            $("#footer-container").load("../../footer.html");
+        });
+    </script>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>
