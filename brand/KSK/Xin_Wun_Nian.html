@@ -1,6 +1,6 @@
 <!-- 
     Developer: Yantong Wu
-    File Purpose: AKATO 新大阪系列
+    File Purpose: KSK 新萬年系列
     Update Date : 2024/02/12
 -->
 
@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AKATO 新大阪系列 - 高世紀瓷質馬賽克專家</title>
+    <title>KSK 新萬年系列 - 高世紀瓷質馬賽克專家</title>
 
     <!--  jQuery library -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -51,15 +51,21 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">AKATO</h6>
-                <h1 class="mb-5">新大阪系列 - 應用場景展示</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">KSK</h6>
+                <h1 class="mb-5">新萬年系列 - 應用場景展示</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/Shin_Osaka/scene1.jpg">
+                    <img class=" " src="img/Ka_le/scene30.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/Shin_Osaka/scene2.jpg">
+                    <img class=" " src="img/Ka_le/scene33.jpg">
+                </div>
+                <div class="testimonial-item bg-white text-center border">
+                    <img class=" " src="img/Ka_le/scene34.jpg">
+                </div>
+                <div class="testimonial-item bg-white text-center border">
+                    <img class=" " src="img/Ka_le/scene33.jpg">
                 </div>
             </div>
         </div>
@@ -70,7 +76,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-5">新大阪系列</h1>
+                <h1 class="mb-5">新萬年系列</h1>
             </div>
             <div class="row g-4 justify-content-center" id="imageContainer"></div>
         </div>
@@ -104,14 +110,14 @@
         var imageContainer = document.getElementById("imageContainer");
         
         // Dynamic generation of image elements and adding them to the container
-        productConfigs.Shin_Osaka.imageInfo.forEach(function (info) {
+        productConfigs.Xin_Wun_Nian.imageInfo.forEach(function (info) {
             var divElement = document.createElement("div");
             divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
             divElement.setAttribute("data-wow-delay", "0.3s");
     
             var imgElement = document.createElement("img");
             imgElement.classList.add("img-fluid", "bg-light");
-            imgElement.src = productConfigs.Shin_Osaka.imagePath + info.fileName;
+            imgElement.src = productConfigs.Xin_Wun_Nian.imagePath + info.fileName;
 
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;

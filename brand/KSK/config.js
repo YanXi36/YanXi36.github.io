@@ -1,6 +1,6 @@
 //    Developer: Yantong Wu
 //    File Purpose: The config of KSK series
-//    Update Date : 2024/01/20
+//    Update Date : 2024/02/12
 
 var productConfigs = {
     Cai_Hue: {
@@ -121,6 +121,66 @@ var productConfigs = {
         ],
         imagePath: "img/Xian_Tuan/",
     },
-    // Add more series configurations as needed
+    Xin_Wun_Nian: {
+        page: "https://yanxi36.github.io/brand/KSK/Xin_Wun_Nian.html", 
+        title: "KSK 新萬年系列 - 高世紀瓷質馬賽克專家", 
+        imageInfo: [
+            { fileName: "229821.jpg", displayText: "229821", scale: 1.5 },
+            { fileName: "479821.jpg", displayText: "479821", scale: 1.5 },
+            { fileName: "229822.jpg", displayText: "229822", scale: 1.5 },
+            { fileName: "479822.jpg", displayText: "479822", scale: 1.5 },
+            { fileName: "229823.jpg", displayText: "229823", scale: 1.5 },
+            { fileName: "479823.jpg", displayText: "479823", scale: 1.5 },
+            { fileName: "229825.jpg", displayText: "229825", scale: 1.5 },
+            { fileName: "479825.jpg", displayText: "479825", scale: 1.5 },
+            { fileName: "229826.jpg", displayText: "229826", scale: 1.5 },
+            { fileName: "479826.jpg", displayText: "479826", scale: 1.5 },
+            { fileName: "229827.jpg", displayText: "229827", scale: 1.5 },
+            { fileName: "479827.jpg", displayText: "479827", scale: 1.5 },
+            { fileName: "229828.jpg", displayText: "229828", scale: 1.5 },
+            { fileName: "479828.jpg", displayText: "479828", scale: 1.5 },
+            { fileName: "229829.jpg", displayText: "229829", scale: 1.5 },
+            { fileName: "479829.jpg", displayText: "479829", scale: 1.5 },
+        ],
+        imagePath: "img/Xin_Wun_Nian/",
+    }, 
+    Yan_Nian: {
+        page: "https://yanxi36.github.io/brand/KSK/Yan_Nian.html", 
+        title: "KSK 岩年系列 - 高世紀瓷質馬賽克專家", 
+        imageInfo: [
+            { fileName: "471281.jpg", displayText: "471281", scale: 1.5 },
+            { fileName: "471282.jpg", displayText: "471282", scale: 1.5 },
+            { fileName: "471283.jpg", displayText: "471283", scale: 1.5 },
+            { fileName: "471284.jpg", displayText: "471284", scale: 1.5 },
+            { fileName: "471285.jpg", displayText: "471285", scale: 1.5 },
+            { fileName: "471286.jpg", displayText: "471286", scale: 1.5 },
+            { fileName: "471287.jpg", displayText: "471287", scale: 1.5 },
+            { fileName: "471288.jpg", displayText: "471288", scale: 1.5 },
+            { fileName: "471289.jpg", displayText: "471289", scale: 1.5 },
+            { fileName: "471290.jpg", displayText: "471290", scale: 1.5 },
+            { fileName: "471291.jpg", displayText: "471291", scale: 1.5 },
+            { fileName: "471292.jpg", displayText: "471292", scale: 1.5 },
+            { fileName: "471293.jpg", displayText: "471293", scale: 1.5 },
+            { fileName: "471294.jpg", displayText: "471294", scale: 1.5 },
+            { fileName: "471295.jpg", displayText: "471295", scale: 1.5 },
+            { fileName: "471296.jpg", displayText: "471296", scale: 1.5 },
+            { fileName: "471297.jpg", displayText: "471297", scale: 1.5 },
+            { fileName: "471400.jpg", displayText: "471400", scale: 1.5 },
+            { fileName: "471401.jpg", displayText: "471401", scale: 1.5 },
+            { fileName: "471402.jpg", displayText: "471402", scale: 1.5 },
+            { fileName: "471403.jpg", displayText: "471403", scale: 1.5 },
+            { fileName: "471405.jpg", displayText: "471405", scale: 1.5 },
+            { fileName: "471406.jpg", displayText: "471406", scale: 1.5 },
+            { fileName: "471410.jpg", displayText: "471410", scale: 1.5 },
+            { fileName: "471411.jpg", displayText: "471411", scale: 1.5 },
+            { fileName: "471412.jpg", displayText: "471412", scale: 1.5 },
+            { fileName: "471413.jpg", displayText: "471413", scale: 1.5 },
+            { fileName: "471415.jpg", displayText: "471415", scale: 1.5 },
+            { fileName: "471416.jpg", displayText: "471416", scale: 1.5 },
+            { fileName: "471417.jpg", displayText: "471417", scale: 1.5 },
+            { fileName: "471418.jpg", displayText: "471418", scale: 1.5 },
+        ],
+        imagePath: "img/Yan_Nian/",
+    }
 };
 
