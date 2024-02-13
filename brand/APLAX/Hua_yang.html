@@ -97,14 +97,14 @@
         var imageContainer = document.getElementById("imageContainer");
         
         // Dynamic generation of image elements and adding them to the container
-        productConfigs.Marrow.imageInfo.forEach(function (info) {
+        productConfigs.Hua_yang.imageInfo.forEach(function (info) {
             var divElement = document.createElement("div");
             divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
             divElement.setAttribute("data-wow-delay", "0.3s");
     
             var imgElement = document.createElement("img");
             imgElement.classList.add("img-fluid", "bg-light");
-            imgElement.src = productConfigs.Marrow.imagePath + info.fileName;
+            imgElement.src = productConfigs.Hua_yang.imagePath + info.fileName;
 
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;
