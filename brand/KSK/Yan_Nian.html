@@ -110,14 +110,14 @@
         var imageContainer = document.getElementById("imageContainer");
         
         // Dynamic generation of image elements and adding them to the container
-        productConfigs.Yi_Si.imageInfo.forEach(function (info) {
+        productConfigs.Yan_Nian.imageInfo.forEach(function (info) {
             var divElement = document.createElement("div");
             divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
             divElement.setAttribute("data-wow-delay", "0.3s");
     
             var imgElement = document.createElement("img");
             imgElement.classList.add("img-fluid", "bg-light");
-            imgElement.src = productConfigs.Yi_Si.imagePath + info.fileName;
+            imgElement.src = productConfigs.Yan_Nian.imagePath + info.fileName;
 
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;
