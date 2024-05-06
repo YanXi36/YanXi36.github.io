@@ -1,7 +1,7 @@
 <!-- 
     Developer: Yantong Wu
-    File Purpose: 高世紀 - 高格系列
-    Update Date : 2023/11/11
+    File Purpose: 高世紀 高格/高明/高晴系列
+    Update Date : 2024/05/06
 -->
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>高世紀 - 高格系列</title>
+    <title>高世紀 高格/高明/高晴系列 - 高世紀瓷質馬賽克專家</title>
 
     <!--  jQuery library -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -48,37 +48,40 @@
     <!-- Series End -->
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">APLAX</h6>
-                <h1 class="mb-5">朵拉系列 - 應用場景展示</h1>
-                <img class=" " src="img/Duo_la/scene_1.png">
+                <h6 class="section-title bg-white text-center text-primary px-3">高世紀</h6>
+                <h1 class="mb-5">高絲系列 - 應用場景展示</h1>
             </div>
-            <!-- <div class="owl-carousel testimonial-carousel position-relative">
+            <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/product-3.png">
+                    <img class=" " src="img/Gao_cheng/key_scene_.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/product-3.png">
+                    <img class=" " src="img/Gao_cheng/key_scene_.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/product-3.png">
+                    <img class=" " src="img/Gao_cheng/key_scene_.jpg">
                 </div>
                 <div class="testimonial-item bg-white text-center border">
-                    <img class=" " src="img/product-3.png">
+                    <img class=" " src="img/Gao_cheng/key_scene_.jpg">
                 </div>
-            </div> -->
+            </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-5">朵拉系列</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">高世紀</h6>
+                <br><br>
+                <h1 class="mb-5">高格系列</h1>
+                <small>22x22 68x68 八角 &bull; 280x280mm</small>
             </div>
+            <br><br>
             <div class="row g-4 justify-content-center" id="imageContainer"></div>
         </div>
     </div>
@@ -86,45 +89,159 @@
     <script src="config.js"></script>
     <!-- Animation when mouse hovers over image -->
     <style>
-        .img-container:hover img {
-            /* Zoom factor can be adjusted as needed */
-            transform: scale(3); 
+        .block-container {
+            width: 250px;
+            height: 230px;
         }
-    
+        
         .img-container {
+            width: 210px;
             overflow: hidden;
             position: relative;
         }
+
+        .img-container:hover img {
+            transform-origin: top left;
+        }
     
-        .img-container img {
-            transition: transform 0.3s ease-in-out;
+        .img-inner-container img {
+            object-fit: cover;
         }
     </style>
+
     
     <script>
         // Get the container
         var imageContainer = document.getElementById("imageContainer");
-    
+
         // Dynamic generation of image elements and adding them to the container
         productConfigs.Gao_ge.imageInfo.forEach(function (info) {
             var divElement = document.createElement("div");
-            divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "img-container");
+            divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
             divElement.setAttribute("data-wow-delay", "0.3s");
-    
+
             var imgElement = document.createElement("img");
             imgElement.classList.add("img-fluid", "bg-light");
             imgElement.src = productConfigs.Gao_ge.imagePath + info.fileName;
-    
+
             var smallElement = document.createElement("small");
             smallElement.textContent = info.displayText;
-    
+
             var innerDiv = document.createElement("div");
-            innerDiv.classList.add("col-1-1");
+            innerDiv.classList.add("col-1-1", "img-inner-container", "img-container");
             innerDiv.appendChild(imgElement);
-    
+
+            // Set the dynamic scale factor from info.scale on hover
+            innerDiv.onmouseover = function () {
+                imgElement.style.transform = "scale(" + info.scale + ")";
+            };
+
+            // Reset the scale factor on mouseout
+            innerDiv.onmouseout = function () {
+                imgElement.style.transform = "scale(1)";
+            };
+
             divElement.appendChild(innerDiv);
             divElement.appendChild(smallElement);
-    
+
+            imageContainer.appendChild(divElement);
+        });
+    </script>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5">高明系列</h1>
+                <small>97x97mm &bull; 297x297mm</small>
+            </div>
+            <br><br>
+            <div class="row g-4 justify-content-center" id="imageContainer-2"></div>
+        </div>
+    </div>
+
+    <script>
+        // Get the container
+        var imageContainer = document.getElementById("imageContainer-2");
+
+        // Dynamic generation of image elements and adding them to the container
+        productConfigs.Gao_min.imageInfo.forEach(function (info) {
+            var divElement = document.createElement("div");
+            divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
+            divElement.setAttribute("data-wow-delay", "0.3s");
+
+            var imgElement = document.createElement("img");
+            imgElement.classList.add("img-fluid", "bg-light");
+            imgElement.src = productConfigs.Gao_min.imagePath + info.fileName;
+
+            var smallElement = document.createElement("small");
+            smallElement.textContent = info.displayText;
+
+            var innerDiv = document.createElement("div");
+            innerDiv.classList.add("col-1-1", "img-inner-container", "img-container");
+            innerDiv.appendChild(imgElement);
+
+            // Set the dynamic scale factor from info.scale on hover
+            innerDiv.onmouseover = function () {
+                imgElement.style.transform = "scale(" + info.scale + ")";
+            };
+
+            // Reset the scale factor on mouseout
+            innerDiv.onmouseout = function () {
+                imgElement.style.transform = "scale(1)";
+            };
+
+            divElement.appendChild(innerDiv);
+            divElement.appendChild(smallElement);
+
+            imageContainer.appendChild(divElement);
+        });
+    </script>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5">高晴系列</h1>
+                <small>22x22 97x97 八角 &bull; 297x297mm</small>
+            </div>
+            <br><br>
+            <div class="row g-4 justify-content-center" id="imageContainer-3"></div>
+        </div>
+    </div>
+
+    <script>
+        // Get the container
+        var imageContainer = document.getElementById("imageContainer-3");
+
+        // Dynamic generation of image elements and adding them to the container
+        productConfigs.Gao_chin.imageInfo.forEach(function (info) {
+            var divElement = document.createElement("div");
+            divElement.classList.add("col-lg-2", "col-sm-2", "wow", "fadeInUp", "block-container");
+            divElement.setAttribute("data-wow-delay", "0.3s");
+
+            var imgElement = document.createElement("img");
+            imgElement.classList.add("img-fluid", "bg-light");
+            imgElement.src = productConfigs.Gao_chin.imagePath + info.fileName;
+
+            var smallElement = document.createElement("small");
+            smallElement.textContent = info.displayText;
+
+            var innerDiv = document.createElement("div");
+            innerDiv.classList.add("col-1-1", "img-inner-container", "img-container");
+            innerDiv.appendChild(imgElement);
+
+            // Set the dynamic scale factor from info.scale on hover
+            innerDiv.onmouseover = function () {
+                imgElement.style.transform = "scale(" + info.scale + ")";
+            };
+
+            // Reset the scale factor on mouseout
+            innerDiv.onmouseout = function () {
+                imgElement.style.transform = "scale(1)";
+            };
+
+            divElement.appendChild(innerDiv);
+            divElement.appendChild(smallElement);
+
             imageContainer.appendChild(divElement);
         });
     </script>
@@ -156,4 +273,5 @@
     <!-- Template Javascript -->
     <script src="../../js/main.js"></script>
 </body>
+
 </html>
