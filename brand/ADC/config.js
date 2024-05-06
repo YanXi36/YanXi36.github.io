@@ -4,6 +4,8 @@
 
 var productConfigs = {
     Gao_jia: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_jia.html", 
+        title: "高世紀 高佳 2 系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "22MA101.jpg", displayText: "22MA101", scale: 1 },
             { fileName: "22MB102.jpg", displayText: "22MB102", scale: 1 },
@@ -69,6 +71,8 @@ var productConfigs = {
         imagePath: "img/Gao_jia/",
     },
     Gradient: {
+        page: "https://yanxi36.github.io/brand/ADC/Gradient.html", 
+        title: "高世紀 漸層系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "22MX975-1.jpg", displayText: "22MX975-1", scale: 2 },
             { fileName: "22MX975-2.jpg", displayText: "22MX975-2", scale: 2 },
@@ -138,6 +142,8 @@ var productConfigs = {
         imagePath: "img/Gradient/",
     },
     Goy: {
+        page: "https://yanxi36.github.io/brand/ADC/Goy.html", 
+        title: "高世紀 高伊系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "22X97MA101.jpg", displayText: "22X97MA101", scale: 1 },
             { fileName: "22X97MA107.jpg", displayText: "22X97MA107", scale: 1 },
@@ -161,6 +167,8 @@ var productConfigs = {
         imagePath: "img/Goy/",
     },
     Gao_ling: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_ling.html", 
+        title: "高世紀 高菱系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "371MA121S.jpg", displayText: "371MA121", scale: 1 },
             { fileName: "371MA101S.jpg", displayText: "371MA101", scale: 1 },
@@ -175,6 +183,8 @@ var productConfigs = {
         imagePath: "img/Gao_ling/",
     },
     Gao_porcelain: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_porcelain.html", 
+        title: "高世紀 高瓷系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "MA101.jpg", displayText: "MA101", scale: 1 },
             { fileName: "MA102.jpg", displayText: "MB102", scale: 1 },
@@ -252,6 +262,8 @@ var productConfigs = {
         imagePath: "img/Gao_porcelain/",
     },
     Gao_xiang: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_xiang.html", 
+        title: "高世紀 高翔系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "621ME107.jpg", displayText: "621MA107", scale: 1 },
             { fileName: "621ME112.jpg", displayText: "621MB112", scale: 1 },
@@ -275,6 +287,8 @@ var productConfigs = {
         imagePath: "img/Gao_xiang/",
     },
     Gose: {
+        page: "https://yanxi36.github.io/brand/ADC/Gose.html", 
+        title: "高世紀 高絲 / 97高瓷系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "971MA121.jpg", displayText: "971MA121", scale: 1 },
             { fileName: "972MA121.jpg", displayText: "972MA121", scale: 1 },
@@ -287,6 +301,8 @@ var productConfigs = {
         imagePath: "img/Gose/",
     },
     Goxe: {
+        page: "https://yanxi36.github.io/brand/ADC/Gose.html", 
+        title: "高世紀 高絲 / 97高瓷系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "97MA101.jpg", displayText: "97MA101", scale: 1 },
             { fileName: "97MA122.jpg", displayText: "97MA122", scale: 1 },
@@ -301,6 +317,8 @@ var productConfigs = {
         imagePath: "img/Gose/",
     }, 
     Gao_ya: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_ya.html", 
+        title: "高世紀 高雅系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "22X97-410.jpg", displayText: "22X97-410", scale: 1 },
             { fileName: "22X97-415.jpg", displayText: "22X97-415", scale: 1 },
@@ -316,6 +334,8 @@ var productConfigs = {
         imagePath: "img/Gao_ya/",
     },
     Gao_ge: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_ge.html", 
+        title: "高世紀 高格/高明/高晴系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "68MX1595.jpg", displayText: "68MX1595", scale: 1 },
             { fileName: "68MX1600.jpg", displayText: "68MX1600", scale: 1 },
@@ -329,6 +349,8 @@ var productConfigs = {
         imagePath: "img/Gao_ge/",
     },
     Gao_min: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_ge.html", 
+        title: "高世紀 高格/高明/高晴系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "97x97MA121.jpg", displayText: "97x97MA121", scale: 1 },
             { fileName: "97x97MA122.jpg", displayText: "97x97MA122", scale: 1 },
@@ -337,6 +359,8 @@ var productConfigs = {
         imagePath: "img/Gao_ge/",
     },
     Gao_chin: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_ge.html", 
+        title: "高世紀 高格/高明/高晴系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "99MX1990.jpg", displayText: "99MX1990", scale: 1 },
             { fileName: "99MX1991.jpg", displayText: "99MX1991", scale: 1 },
@@ -345,6 +369,8 @@ var productConfigs = {
         imagePath: "img/Gao_ge/",
     },
     Dian_jing: {
+        page: "https://yanxi36.github.io/brand/ADC/Dian_jing.html", 
+        title: "高世紀 高典/高晶系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "236MA121.jpg", displayText: "236MA121", scale: 1 },
             { fileName: "236-590.jpg", displayText: "236-590", scale: 1 },
@@ -359,6 +385,8 @@ var productConfigs = {
         imagePath: "img/Dian_jing/",
     },
     Gao_zheng01: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_zheng01.html", 
+        title: "高世紀 高正/高正1系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "45MM1115.jpg", displayText: "45MM1115", scale: 1 },
             { fileName: "45MM1116.jpg", displayText: "45MM1116", scale: 1 },
@@ -394,6 +422,8 @@ var productConfigs = {
         imagePath: "img/Gao_zheng01/",
     },
     Gao_zheng23: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_zheng23.html", 
+        title: "高世紀 高正2/高正3系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "45MM1810.jpg", displayText: "45MM1810", scale: 1 },
             { fileName: "45MM1116.jpg", displayText: "45MM1116", scale: 1 },
@@ -435,6 +465,8 @@ var productConfigs = {
         imagePath: "img/Gao_zheng23/",
     },
     Gao_cheng: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_cheng.html", 
+        title: "高世紀 高成系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "45MM2000.jpg", displayText: "45MM2000", scale: 1 },
             { fileName: "45MM1115.jpg", displayText: "45MM1115 (亮面) / 45MM1116 (霧面)", scale: 1 },
@@ -456,6 +488,8 @@ var productConfigs = {
         imagePath: "img/Gao_cheng/",
     },
     Gao_fang: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_fang.html", 
+        title: "高世紀 高方系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "95MM1810.jpg", displayText: "95MM1810", scale: 1 },
             { fileName: "95MM1115.jpg", displayText: "95MM1115", scale: 1 },
@@ -490,6 +524,8 @@ var productConfigs = {
         imagePath: "img/Gao_fang/",
     },
     Gao_fu: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_fu.html", 
+        title: "高世紀 高福系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "95-330.jpg", displayText: "95-330", scale: 1 },
             { fileName: "95-330-01.jpg", displayText: "", scale: 1 },
@@ -521,6 +557,8 @@ var productConfigs = {
         imagePath: "img/Gao_fu/",
     },
     Gao_so: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_so.html", 
+        title: "高世紀 高首系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "95MJ200.jpg", displayText: "95MJ200", scale: 1 },
             { fileName: "95MJ200A.jpg", displayText: "95MJ200A", scale: 1 },
@@ -550,6 +588,8 @@ var productConfigs = {
         imagePath: "img/Gao_so/",
     },
     Gao_ping: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_ping.html", 
+        title: "高世紀 高品系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "195MJ200A-01.jpg", displayText: "195MJ200A", scale: 1 },
             { fileName: "195MJ200A.jpg", displayText: "", scale: 1 },
@@ -565,6 +605,8 @@ var productConfigs = {
         imagePath: "img/Gao_ping/",
     },
     Gao_guang: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_guang.html", 
+        title: "高世紀 高廣系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "MY1820-S.jpg", displayText: "47MY1820", scale: 1 },
             { fileName: "MY1820.jpg", displayText: "", scale: 1 },
@@ -606,6 +648,8 @@ var productConfigs = {
         imagePath: "img/Gao_guang/",
     },
     Gao_wang: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_wang.html", 
+        title: "高世紀 高旺系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "47MM1145.jpg", displayText: "47MM1145", scale: 1 },
             { fileName: "47MM1145B.jpg", displayText: "47MM1145B", scale: 1 },
@@ -634,6 +678,8 @@ var productConfigs = {
         imagePath: "img/Gao_wang/",
     },
     Gao_yan: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_yan.html", 
+        title: "高世紀 高岩系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "47TK00.jpg", displayText: "47TK00", scale: 1 },
             { fileName: "47TK4A.jpg", displayText: "47TK4A", scale: 1 },
@@ -657,6 +703,8 @@ var productConfigs = {
         imagePath: "img/Gao_yan/",
     },
     Gao_pin: {
+        page: "https://yanxi36.github.io/brand/ADC/Gao_pin.html", 
+        title: "高世紀 高平系列 - 高世紀瓷質馬賽克專家", 
         imageInfo: [
             { fileName: "47PK300A.jpg", displayText: "47PK300A", scale: 1 },
             { fileName: "47PK301C.jpg", displayText: "47PK301C", scale: 1 },
